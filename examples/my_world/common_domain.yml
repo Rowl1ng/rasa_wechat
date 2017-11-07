@@ -1,0 +1,26 @@
+slots:
+  cuisine:
+    type: text
+  people:
+    type: text
+
+intents:
+ - greet
+ - goodbye
+ - chat
+
+entities:
+ - action
+
+templetes:
+ utter_greet:
+  - "哈咯~"
+ utter_goodbye:
+  - "拜拜~"
+ utter_chat:
+  - "吃饭了嘛？"
+
+actions:
+ - utter_great
+ - utter_goodbye
+ - utter_chat
