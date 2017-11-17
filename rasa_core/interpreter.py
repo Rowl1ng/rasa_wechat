@@ -80,7 +80,7 @@ class RasaNLUHttpInterpreter(NaturalLanguageInterpreter):
     def parse(self, text):
         """Parses a text message.
 
-        Returns a default value if the parsing of the text failed."""
+        Returns a nlu value if the parsing of the text failed."""
 
         default_return = {"intent": {"name": "", "confidence": 0.0},
                           "entities": [], "text": ""}
@@ -134,13 +134,14 @@ class RasaNLUInterpreter(NaturalLanguageInterpreter):
             self.interpreter = Interpreter.load(self.metadata,
                                                 RasaNLUConfig(config_file,
                                                               os.environ))
+            # self.interpreter = Interpreter.load(model_directory, RasaNLUConfig(config_file,os.environ))
         else:
             self.interpreter = None
 
     def parse(self, text):
         """Parses a text message.
 
-        Returns a default value if the parsing of the text failed."""
+        Returns a nlu value if the parsing of the text failed."""
 
         if self.lazy_init and self.interpreter is None:
             from rasa_nlu.model import Interpreter

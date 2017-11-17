@@ -16,9 +16,9 @@ logger = logging.getLogger(__name__)
 
 
 def run_babi_online(max_messages=10):
-    training_data = 'examples/babi/data/babi_task5_dev_rasa_even_smaller.md'
+    training_data = 'data/babi_task5_dev_rasa_even_smaller.md'
     logger.info("Starting to train policy")
-    agent = Agent("examples/restaurant_domain.yml",
+    agent = Agent("../restaurant_domain.yml",
                   policies=[MemoizationPolicy(), RestaurantPolicy()],
                   interpreter=RegexInterpreter())
 

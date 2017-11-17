@@ -13,7 +13,7 @@ class UserMessage(object):
 
      Includes the channel the responses should be sent to."""
 
-    DEFAULT_SENDER = "default"
+    DEFAULT_SENDER = "nlu"
 
     def __init__(self, text, output_channel=None, sender_id=None):
         # type: (Optional[Text], Optional[OutputChannel], Text) -> None

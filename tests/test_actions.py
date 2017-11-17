@@ -15,7 +15,7 @@ from rasa_core.trackers import DialogueStateTracker
 
 
 def test_restart(default_dispatcher, default_domain):
-    tracker = DialogueStateTracker("default",
+    tracker = DialogueStateTracker("nlu",
                                    default_domain.slots,
                                    default_domain.topics,
                                    default_domain.default_topic)

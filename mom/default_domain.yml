@@ -1,4 +1,3 @@
-
 slots:
   cuisine:
     type: text
@@ -30,33 +29,33 @@ entities:
 
 templates:
   utter_greet:
-    - "hey there!"
+    - "你好!"
   utter_goodbye:
-    - "goodbye :("
+    - "拜拜~"
   utter_default:
-    - "nlu message"
-  utter_ack_dosearch: 
-    - "ok let me see what I can find"
+    - "哦"
+  utter_ack_dosearch:
+    - "我找找看"
   utter_ack_findalternatives:
-    - "ok let me see what else there is"
+    - "我看看还有啥"
   utter_ack_makereservation:
-    - "ok making a reservation"
-  utter_ask_cuisine: 
-    - "what kind of cuisine would you like?"
+    - "好了，我帮你订了"
+  utter_ask_cuisine:
+    - "想吃啥?"
   utter_ask_helpmore:
-    - "is there anything more that I can help with?"
+    - "还有别的事儿吗?"
   utter_ask_howcanhelp:
-    - "how can I help you?"
+    - "在干啥?"
   utter_ask_location:
-    - "in which city?"
-  utter_ask_moreupdates: 
-    - "anything else you'd like to modify?"
+    - "哪儿呀?"
+  utter_ask_moreupdates:
+    - "有要改的吗?"
   utter_ask_numpeople:
-    - "for how many people?"
-  utter_ask_price: 
-    - "in which price range?"
-  utter_on_it: 
-    - "I'm on it"
+    - "几个人呀?"
+  utter_ask_price:
+    - "要多少钱左右的?"
+  utter_on_it:
+    - "等等"
 
 actions:
   - utter_greet

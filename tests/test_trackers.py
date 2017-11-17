@@ -108,7 +108,7 @@ def test_tracker_write_to_story(tmpdir, default_domain):
 def test_tracker_state_regression(default_domain):
     class HelloInterpreter(NaturalLanguageInterpreter):
         def parse(self, text):
-            intent = "greet" if 'hello' in text else "default"
+            intent = "greet" if 'hello' in text else "nlu"
             return {
                 "text": text,
                 "intent": {"name": intent},
@@ -121,7 +121,7 @@ def test_tracker_state_regression(default_domain):
     n_actions = []
     for i in range(0, 2):
         agent.handle_message("hello")
-    tracker = agent.tracker_store.get_or_create_tracker('default')
+    tracker = agent.tracker_store.get_or_create_tracker('nlu')
 
     # Ensures that the tracker has changed between the utterances
     # (and wasn't reset in between them)
@@ -132,7 +132,7 @@ def test_tracker_state_regression(default_domain):
 
 
 def test_restart_event(default_domain):
-    tracker = DialogueStateTracker("default", default_domain.slots,
+    tracker = DialogueStateTracker("nlu", default_domain.slots,
                                    default_domain.topics,
                                    default_domain.default_topic)
     # the retrieved tracker should be empty
@@ -156,7 +156,7 @@ def test_restart_event(default_domain):
 
     dialogue = tracker.as_dialogue()
 
-    recovered = DialogueStateTracker("default", default_domain.slots,
+    recovered = DialogueStateTracker("nlu", default_domain.slots,
                                      default_domain.topics,
                                      default_domain.default_topic)
     recovered.recreate_from_dialogue(dialogue)
@@ -168,7 +168,7 @@ def test_restart_event(default_domain):
 
 
 def test_revert_action_event(default_domain):
-    tracker = DialogueStateTracker("default", default_domain.slots,
+    tracker = DialogueStateTracker("nlu", default_domain.slots,
                                    default_domain.topics,
                                    default_domain.default_topic)
     # the retrieved tracker should be empty
@@ -190,7 +190,7 @@ def test_revert_action_event(default_domain):
 
     dialogue = tracker.as_dialogue()
 
-    recovered = DialogueStateTracker("default", default_domain.slots,
+    recovered = DialogueStateTracker("nlu", default_domain.slots,
                                      default_domain.topics,
                                      default_domain.default_topic)
     recovered.recreate_from_dialogue(dialogue)

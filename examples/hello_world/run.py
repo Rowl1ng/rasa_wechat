@@ -37,7 +37,7 @@ class SimplePolicy(Policy):
 
 class HelloInterpreter(NaturalLanguageInterpreter):
     def parse(self, message):
-        intent = "greet" if 'hello' in message else "default"
+        intent = "greet" if 'hello' in message else "nlu"
         return {
             "text": message,
             "intent": {"name": intent, "confidence": 1.0},
@@ -61,5 +61,5 @@ def run_hello_world(serve_forever=True):
 
 
 if __name__ == '__main__':
-    agent = run_hello_world(serve_forever=False)
-    print (agent.handle_message("_greet"))
+    agent = run_hello_world()
+    # print (agent.handle_message("_greet"))

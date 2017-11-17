@@ -25,7 +25,7 @@ slots:
     type: list
 templates:
   utter_default:
-  - default message
+  - nlu message
   utter_goodbye:
   - goodbye :(
   utter_greet:

@@ -40,11 +40,13 @@ class Dispatcher(object):
     def utter_message(self, message):
         # type: (Text) -> None
         """Send a message to the client."""
-
+        print(message)
         if self.sender is not None and self.output_channel is not None:
-            for message_part in message.split("\n\n"):
-                self.output_channel.send_text_message(self.sender, message_part)
-                self.send_messages.append(message_part)
+            # for message_part in message.split("\n\n"):
+            #     self.output_channel.send_text_message(self.sender, message_part)
+            #     self.send_messages.append(message_part)
+            self.output_channel.send_text_message(self.sender, message)
+            self.send_messages.append(message)
 
     def utter_custom_message(self, *elements):
         # type: (*Dict[Text, Any]) -> None

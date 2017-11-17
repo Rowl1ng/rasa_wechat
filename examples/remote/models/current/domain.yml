@@ -1,6 +1,6 @@
 action_factory: remote
 actions:
-- default
+- nlu
 - greet
 - goodbye
 - youarewelcome

@@ -32,8 +32,8 @@ class Topic(object):
         self.name = name
 
 
-# The default topic will not carry a name nor will it overwrite the topic of
-# a dialog e.g. if an action of this default topic is executed, the previous
+# The nlu topic will not carry a name nor will it overwrite the topic of
+# a dialog e.g. if an action of this nlu topic is executed, the previous
 # topic is kept active
 DefaultTopic = Topic(None)
 

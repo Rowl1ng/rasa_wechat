@@ -11,7 +11,7 @@ from rasa_core import utils
 
 
 def action_factory_by_name(name):
-    if name == "local" or name is None:     # this is the default factory
+    if name == "local" or name is None:     # this is the nlu factory
         return local_action_factory
     elif name == "remote":
         return remote_action_factory

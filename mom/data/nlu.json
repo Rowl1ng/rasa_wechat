@@ -1,0 +1,728 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "你好",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "你好啊",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "你好吗",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hello",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hi",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "早上好",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "晚上好",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "嗨",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "是的",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "是",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "对的",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "确实",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "好",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "ok",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "好的",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "好的，谢谢你",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "对的",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "好滴",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "好啊",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "我想找地方吃饭",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "我想吃火锅啊",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 2,
+            "end": 5,
+            "value": "吃火锅",
+            "entity": "food"
+          }
+        ]
+      },
+      {
+        "text": "找个吃拉面的店",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 5,
+            "value": "拉面",
+            "entity": "food"
+          }
+        ]
+      },
+      {
+        "text": "这附近哪里有吃麻辣烫的地方",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 7,
+            "end": 10,
+            "value": "麻辣烫",
+            "entity": "food"
+          }
+        ]
+      },
+      {
+        "text": "附近有什么好吃的地方吗",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "肚子饿了，推荐一家吃放的地儿呗",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "带老婆孩子去哪里吃饭比较好",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "想去一家有情调的餐厅",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "bye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "再见",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "886",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "拜拜",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "下次见",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "感冒了怎么办",
+        "intent": "medical",
+        "entities": [
+          {
+            "start": 0,
+            "end": 2,
+            "value": "感冒",
+            "entity": "disease"
+          }
+        ]
+      },
+      {
+        "text": "我便秘了，该吃什么药",
+        "intent": "medical",
+        "entities": [
+          {
+            "start": 1,
+            "end": 3,
+            "value": "便秘",
+            "entity": "disease"
+          }
+        ]
+      },
+      {
+        "text": "我胃痛，该吃什么药？",
+        "intent": "medical",
+        "entities": [
+          {
+            "start": 1,
+            "end": 3,
+            "value": "胃痛",
+            "entity": "disease"
+          }
+        ]
+      },
+      {
+        "text": "一直打喷嚏怎么办",
+        "intent": "medical",
+        "entities": [
+          {
+            "start": 2,
+            "end": 5,
+            "value": "打喷嚏",
+            "entity": "disease"
+          }
+        ]
+      },
+      {
+        "text": "父母都有高血压，我会遗传吗",
+        "intent": "medical",
+        "entities": [
+          {
+            "start": 4,
+            "end": 7,
+            "value": "高血压",
+            "entity": "disease"
+          }
+        ]
+      },
+      {
+        "text": "我生病了",
+        "intent": "medical",
+        "entities": []
+      },
+      {
+        "text": "头上烫烫的，感觉发烧了",
+        "intent": "medical",
+        "entities": [
+          {
+            "start": 8,
+            "end": 10,
+            "value": "发烧",
+            "entity": "disease"
+          }
+        ]
+      },
+      {
+        "text": "头很疼该怎么办",
+        "intent": "medical",
+        "entities": []
+      },
+      {
+        "text": "减肥有什么好方法吗？",
+        "intent": "medical",
+        "entities": []
+      },
+      {
+        "text": "怎样良好的生活习惯才能预防生病呢",
+        "intent": "medical",
+        "entities": []
+      },
+      {
+        "text": "什么是飞信",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 3,
+            "end": 5,
+            "value": "飞信",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "什么是飞信用户",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 3,
+            "end": 7,
+            "value": "飞信用户",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "什么是飞信移动用户",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 3,
+            "end": 9,
+            "value": "飞信移动用户",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "什么是飞信互联网用户",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 3,
+            "end": 10,
+            "value": "飞信互联网用户",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "飞信有什么产品",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 0,
+            "end": 2,
+            "value": "飞信",
+            "entity": ""
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "value": "产品",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "没有中国移动手机号的用户可以开通、使用飞信服务吗？",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 2,
+            "end": 9,
+            "value": "中国移动手机号",
+            "entity": ""
+          },
+          {
+            "start": 19,
+            "end": 23,
+            "value": "飞信服务",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "如果服务密码遗忘了，该如何处理？",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 2,
+            "end": 6,
+            "value": "服务密码",
+            "entity": ""
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "value": "遗忘",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "我没有设置过服务密码，该如何设置",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 3,
+            "end": 5,
+            "value": "设置",
+            "entity": ""
+          },
+          {
+            "start": 6,
+            "end": 10,
+            "value": "服务密码",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "我想修改服务密码，如何操作？",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 2,
+            "end": 4,
+            "value": "修改",
+            "entity": ""
+          },
+          {
+            "start": 4,
+            "end": 8,
+            "value": "服务密码",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "我通过湖北移动网站如何缴费？",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 3,
+            "end": 5,
+            "value": "湖北",
+            "entity": ""
+          },
+          {
+            "start": 5,
+            "end": 9,
+            "value": "移动网站",
+            "entity": ""
+          },
+          {
+            "start": 11,
+            "end": 13,
+            "value": "缴费",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "我的积分怎么兑换成话费？",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 2,
+            "end": 4,
+            "value": "积分",
+            "entity": ""
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "value": "兑换",
+            "entity": ""
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "value": "话费",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "我平时上网很少，偶尔上QQ聊天，请问我使用哪种数据流量套餐划算？",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 23,
+            "end": 29,
+            "value": "数据流量套餐",
+            "entity": ""
+          },
+          {
+            "start": 3,
+            "end": 7,
+            "value": "上网很少",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "我拨打朋友的手机时对方的彩铃我很喜欢，我如何能设置成我的彩铃",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 12,
+            "end": 14,
+            "value": "彩铃",
+            "entity": ""
+          },
+          {
+            "start": 23,
+            "end": 25,
+            "value": "设置",
+            "entity": ""
+          },
+          {
+            "start": 9,
+            "end": 11,
+            "value": "对方",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "听朋友说移动手机号可以做邮箱，怎么办理？",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 4,
+            "end": 9,
+            "value": "移动手机号",
+            "entity": ""
+          },
+          {
+            "start": 12,
+            "end": 14,
+            "value": "邮箱",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "国际漫游时如何拨打可享受资费优惠",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "国际漫游",
+            "entity": ""
+          },
+          {
+            "start": 12,
+            "end": 16,
+            "value": "资费优惠",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "我的手机提示被锁了，要求输入PIN码，怎么办？",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 2,
+            "end": 4,
+            "value": "手机",
+            "entity": ""
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "value": "被锁",
+            "entity": ""
+          },
+          {
+            "start": 14,
+            "end": 18,
+            "value": "PIN码",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "梦网业务是什么",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "梦网业务",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "梦网业务如何定制",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "梦网业务",
+            "entity": ""
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "value": "定制",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "梦网业务如何收费",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "梦网业务",
+            "entity": ""
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "value": "收费",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "梦网业务的退订方法有哪些",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "梦网业务",
+            "entity": ""
+          },
+          {
+            "start": 5,
+            "end": 7,
+            "value": "退订",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "手机钱包是什么业务",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "手机钱包",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "如何可以及时了解自己实时话费及余额情况",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 10,
+            "end": 14,
+            "value": "实时话费",
+            "entity": ""
+          },
+          {
+            "start": 15,
+            "end": 19,
+            "value": "余额情况",
+            "entity": ""
+          },
+          {
+            "start": 6,
+            "end": 8,
+            "value": "了解",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "如何可以查到我上月的话费消费情况",
+        "intent": "other",
+        "entities": [
+          {
+            "start": 7,
+            "end": 9,
+            "value": "上月",
+            "entity": ""
+          },
+          {
+            "start": 10,
+            "end": 12,
+            "value": "话费",
+            "entity": ""
+          }
+        ]
+      },
+      {
+        "text": "麻辣烫",
+        "intent": "food",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "麻辣烫",
+            "entity": "food"
+          }
+        ]
+      },
+      {
+        "text": "蔬菜",
+        "intent": "food",
+        "entities": [
+          {
+            "start": 0,
+            "end": 2,
+            "value": "蔬菜",
+            "entity": "food"
+          }
+        ]
+      },
+      {
+        "text": "吃了",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "salad",
+        "intent": "food",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "salad",
+            "entity": "food"
+          }
+        ]
+      }
+    ]
+  }
+}

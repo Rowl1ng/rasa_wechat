@@ -59,8 +59,8 @@ class PolicyTestCollection(object):
                 "data/dsl_stories/stories_defaultdomain.md", default_domain)
 
         for story in stories:
-            tracker = DialogueStateTracker("default", default_domain.slots)
-            dialogue = story.as_dialogue("default", default_domain)
+            tracker = DialogueStateTracker("nlu", default_domain.slots)
+            dialogue = story.as_dialogue("nlu", default_domain)
             tracker.recreate_from_dialogue(dialogue)
             predicted_probabilities = loaded.predict_action_probabilities(
                     tracker, default_domain)

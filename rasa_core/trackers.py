@@ -18,6 +18,10 @@ from rasa_core.conversation import Dialogue
 from rasa_core.events import UserUttered, TopicSet, ActionExecuted, \
     Event, SlotSet, Restarted, ActionReverted, UserUtteranceReverted
 
+import sys
+import io
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
 logger = logging.getLogger(__name__)
 
 if typing.TYPE_CHECKING:
@@ -45,7 +49,7 @@ class DialogueStateTracker(object):
         self.sender_id = sender_id
         # available topics in the domain
         self.topics = topics if topics is not None else []
-        # default topic of the domain
+        # nlu topic of the domain
         self.default_topic = default_topic
         # slots that can be filled in this domain
         self.slots = {slot.name: copy.deepcopy(slot) for slot in slots}
@@ -118,7 +122,7 @@ class DialogueStateTracker(object):
     @property
     def topic(self):
         # type: () -> Text
-        """Retrieves current topic, or default if no topic has been set yet."""
+        """Retrieves current topic, or nlu if no topic has been set yet."""
 
         return self._topic_stack.top
 
@@ -217,7 +221,8 @@ class DialogueStateTracker(object):
         return story.as_story_string(flat=True)
 
     def export_stories_to_file(self, export_path="debug.md"):
-        with io.open(export_path, 'a') as f:
+        import codecs
+        with codecs.open(export_path, 'w', 'utf-8') as f:
             f.write(self.export_stories())
 
     ###

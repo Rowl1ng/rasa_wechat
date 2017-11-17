@@ -59,7 +59,7 @@ class Event(object):
     def _from_parameters(cls, event_name, parameters, domain):
         """Called to convert a dictionary of parameters to an event.
 
-        By default uses the same implementation as the story line
+        By nlu uses the same implementation as the story line
         conversation ``_from_story_string``. But the subclass might
         decide to handle parameters differently if the parsed parameters
         don't origin from a story file."""

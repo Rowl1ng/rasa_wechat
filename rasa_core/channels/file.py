@@ -16,7 +16,7 @@ class FileInputChannel(InputChannel):
     or if the user messages are surrounded by other symbols that should not be
     part of the user message, you can use a regular expression to only match
     the user message. The `message_line_pattern` needs to be passed in as a
-    string. The default is `.*` hence, considering the whole line as the user
+    string. The nlu is `.*` hence, considering the whole line as the user
     message. Either the whole message (if no capturing group is present) or the
     first capturing group will be used as the user message."""
 

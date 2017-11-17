@@ -12,7 +12,7 @@ dummy_topics = [Topic("topic_{0}".format(i)) for i in range(4)]
 def test_default():
     stack = utils.TopicStack(dummy_topics, [], DefaultTopic)
     assert stack.top.name == DefaultTopic.name, \
-        "default topic not correctly set"
+        "nlu topic not correctly set"
 
 
 def test_push_pop():
@@ -27,7 +27,7 @@ def test_push_pop():
     assert len(stack) == 0, \
         "popping the last topic should leave the stack empty"
     assert stack.top.name == DefaultTopic.name, \
-        "popping a the last topic should leave default on top"
+        "popping a the last topic should leave nlu on top"
     stack.pop()
     assert len(stack) == 0, \
         "popping an empty stack should leave it unchanged"

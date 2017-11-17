@@ -1,6 +1,6 @@
 intents:
  - greet
- - default
+ - nlu
  - goodbye
 
 entities:
@@ -12,7 +12,7 @@ templates:
   utter_goodbye:
     - "goodbye :("
   utter_default:
-    - "default message"
+    - "nlu message"
 
 actions:
   - utter_default

@@ -251,9 +251,9 @@ class StoryFileReader(object):
     @staticmethod
     def read_from_file(file_name, domain, template_variables=None):
         """Given a json file reads the contained stories."""
-
+        import codecs
         try:
-            with io.open(file_name, "r") as f:
+            with codecs.open(file_name, "r", 'utf-8') as f:
                 lines = f.readlines()
             return StoryFileReader(domain, template_variables).process_lines(
                     lines)

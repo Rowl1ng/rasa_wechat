@@ -112,7 +112,7 @@ def collect_story_predictions(story_file, policy_model_path, nlu_model_path,
     logger.info("Evaluating {} stories\nProgress:".format(len(stories)))
 
     for s in tqdm(stories):
-        sender = "default-" + uuid.uuid4().hex
+        sender = "nlu-" + uuid.uuid4().hex
 
         dialogue = s.as_dialogue(sender, agent.domain)
         actions_between_utterances = []

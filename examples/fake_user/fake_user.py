@@ -28,7 +28,7 @@ class FakeUserInputChannel(InputChannel):
         num_messages = 0
 
         while max_message_limit is None or num_messages < max_message_limit:
-            tracker = self.tracker_store.retrieve('default')
+            tracker = self.tracker_store.retrieve('nlu')
             text = self.customer.respond_to_action(tracker)
             on_message(UserMessage(text, ConsoleOutputChannel()))
             num_messages += 1

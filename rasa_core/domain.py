@@ -189,7 +189,7 @@ class Domain(with_metaclass(abc.ABCMeta, object)):
 
         max_history specifies the number of previous steps to be included
         in the input. Each row in the array corresponds to the binarised
-        features of each state. Result is padded with default values if
+        features of each state. Result is padded with nlu values if
         there are fewer than `max_history` states present."""
 
         all_features = self.features_for_tracker_history(tracker)
@@ -197,6 +197,7 @@ class Domain(with_metaclass(abc.ABCMeta, object)):
 
     def random_template_for(self, utter_action):
         if utter_action in self.templates:
+            # print(self.templates[utter_action])
             return np.random.choice(self.templates[utter_action])
         else:
             return None

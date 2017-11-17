@@ -85,6 +85,7 @@ class BinaryFeaturizer(Featurizer):
                         best_intent_prob = prob
                 elif feature_name in input_feature_map:
                     if prob != 0.0:
+                        print(feature_name)
                         idx = input_feature_map[feature_name]
                         used_features[idx] = prob
                         using_only_ints = using_only_ints and utils.is_int(prob)

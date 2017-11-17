@@ -1,0 +1,39 @@
+intents:
+ - greet
+ - goodbye
+ - affirm
+ - deny
+ - food
+ - restaurant_search
+
+entities:
+ - food
+
+templates:
+  utter_greet:
+    - "你好"
+  utter_goodbye:
+    - "再见"
+  utter_default:
+    - "嗯"
+  utter_eat_query:
+    - "吃了吗"
+  utter_eat_what:
+    - "吃的啥"
+  utter_eat:
+    - "快去吃饭"
+  utter_eat_healthy:
+    - "吃清淡点，天天长痘"
+  utter_appraise:
+    - "这还差不多"
+
+actions:
+  - utter_default
+  - utter_greet
+  - utter_goodbye
+  - utter_eat_query
+  - utter_eat
+  - utter_eat_what
+  - utter_eat_healthy
+  - utter_appraise
+

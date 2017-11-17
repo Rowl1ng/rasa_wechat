@@ -93,7 +93,7 @@ class BooleanSlot(Slot):
             else:
                 return [0.0]
         except (TypeError, ValueError):
-            # we couldn't convert the value to float - using default value
+            # we couldn't convert the value to float - using nlu value
             return [0.0]
 
 
@@ -114,7 +114,7 @@ class ListSlot(Slot):
             else:
                 return [0.0]
         except (TypeError, ValueError):
-            # we couldn't convert the value to a list - using default value
+            # we couldn't convert the value to a list - using nlu value
             return [0.0]
 
 

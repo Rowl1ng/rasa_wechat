@@ -19,7 +19,7 @@ def test_hello_world_example():
     assert responses[-1] == "hey there!"
 
     responses.extend(agent.handle_message("goodbye"))
-    assert responses[-1] == "default message"
+    assert responses[-1] == "nlu message"
 
     assert len(responses) == 2, ("The bot shouldn't have sent any other "
                                  "message then the above two")
@@ -49,7 +49,7 @@ def test_babi_online_example():
     responses = agent.handle_message("_greet")
     assert responses[-1] in {"hey there!",
                              "how can I help you?",
-                             "default message"}
+                             "nlu message"}
 
 
 def test_concerts_example():
@@ -77,7 +77,7 @@ def test_concerts_online_example():
     responses = agent.handle_message("_greet")
     assert responses[-1] in {"hey there!",
                              "how can I help you?",
-                             "default message"}
+                             "nlu message"}
 
 
 def test_fake_user_online_example():
