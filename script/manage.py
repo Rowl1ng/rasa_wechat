@@ -7,7 +7,8 @@ import uvloop
 
 from wechat.app import create_app
 
-import os,sys
+import os, sys
+
 parent = os.path.dirname(os.path.realpath(__file__))
 sys.path.append('root/MITIE/mitielib')
 

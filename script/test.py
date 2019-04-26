@@ -10,7 +10,7 @@ from rasa_core.policies import Policy
 from rasa_core.actions.action import ACTION_LISTEN_NAME
 from rasa_core import utils
 import numpy as np
-nlu_model_path = '../models/default/model_20171117-181635'
+nlu_model_path = '../models/default/model_20171118-162138'
 
 class SimplePolicy(Policy):
     def predict_action_probabilities(self, tracker, domain):

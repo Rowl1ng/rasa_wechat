@@ -293,6 +293,7 @@ class Domain(with_metaclass(abc.ABCMeta, object)):
 
         # Set all found entities with the feature value 1.0
         for entity in tracker.latest_message.entities:
+            # print(entity["entity"])
             key = "entity_{0}".format(entity["entity"])
             feature_dict[key] = 1.
 

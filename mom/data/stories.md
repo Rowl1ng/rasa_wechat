@@ -22,6 +22,13 @@
     - utter_goodbye
     - export
 
+## Generated Story 2573913479639607027
+* _greet
+    - utter_greet
+* _restaurant_search
+    - utter_eat_query
+    - export
+
 ## say goodbye
 * _goodbye[]
   - utter_goodbye

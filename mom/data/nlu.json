@@ -722,6 +722,11 @@
             "entity": "food"
           }
         ]
+      },
+      {
+        "text": "我饿了",
+        "intent": "restaurant_search",
+        "entities": []
       }
     ]
   }

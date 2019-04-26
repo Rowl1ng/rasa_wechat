@@ -17,7 +17,7 @@ numpy==1.13.1
 pandoc==1.0.0b2
 redis==2.10.5
 six==1.10.0
-tensorflow==1.1.0
+tensorflow ~> 1.6.0.
 typing==3.6.2
 networkx==1.11
 pymessenger==0.0.7.0

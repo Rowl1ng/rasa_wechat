@@ -23,5 +23,5 @@ def predict(model_directory):
 # model_directory = train()
 # print (model_directory)
 
-# model_directory = train()
-predict("../models/default/model_20171117-181635")
+model_directory = train()
+# predict("../models/default/model_20171117-181635")

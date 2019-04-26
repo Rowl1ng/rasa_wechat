@@ -87,8 +87,8 @@ from rasa_core.interpreter import RasaNLUInterpreter
 sys.path.append('../MITIE/mitielib')
 # from momo.helper import get_momo_answer  # 导入获取机器人回答获取函数
 
-nlu_model_path = 'models/nlu/model_20171109-164837'
-agent = Agent.load("models/policy/mom", interpreter=RasaNLUInterpreter(nlu_model_path))
+nlu_model_path = '../models/default/model_20171117-181635'
+agent = Agent.load("../models/policy/mom", interpreter=RasaNLUInterpreter(nlu_model_path))
 
 # momo_chat = ChatBot(
 #     'Momo',
@@ -110,6 +110,9 @@ def get_momo_answer(content):
     # response = momo_chat.get_response(content)
     if isinstance(response, str):
         return response
+    response = " ".join(response)
+    if response == "":
+        return "哦"
     return response
 
 

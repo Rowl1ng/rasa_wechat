@@ -16,7 +16,7 @@ from rasa_core.tracker_store import InMemoryTrackerStore
 from rasa_core.policies.keras_policy import KerasPolicy
 from rasa_core.policies.memoization import MemoizationPolicy
 
-nlu_model_path = '../models/nlu/model_20171109-164837'
+nlu_model_path = '../models/default/model_20171118-162138'
 logger = logging.getLogger(__name__)
 
 class SimplePolicy(Policy):
